@@ -6,7 +6,7 @@ import type {
   WorkbenchTrendItem,
 } from '@vben/common-ui';
 
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 import {
@@ -24,6 +24,13 @@ import { openWindow } from '@vben/utils';
 import AnalyticsVisitsSource from '../analytics/analytics-visits-source.vue';
 
 const userStore = useUserStore();
+
+const contentStyle = computed(() => {
+  return {
+    height: `calc(100vh - 50px)`,
+    overflowY: 'auto' as const,
+  };
+});
 
 // 这是一个示例数据，实际项目中需要根据实际情况进行调整
 // url 也可以是内部路由，在 navTo 方法中识别处理，进行内部跳转
@@ -234,7 +241,7 @@ function navTo(nav: WorkbenchProjectItem | WorkbenchQuickNavItem) {
 </script>
 
 <template>
-  <div class="p-5">
+  <div class="p-5" :style="contentStyle">
     <WorkbenchHeader
       :avatar="userStore.userInfo?.avatar || preferences.app.defaultAvatar"
     >

@@ -13,7 +13,7 @@
       "path": "apps/web-ele",
     },
     {
-      "name": "@vben/web-antd",
+      "name": "@vben/web-frontend",
       "path": "apps/web-frontend",
     },
     {
