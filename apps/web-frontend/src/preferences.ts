@@ -10,4 +10,23 @@ export const overridesPreferences = defineOverridesPreferences({
   app: {
     name: import.meta.env.VITE_APP_TITLE,
   },
+  breadcrumb: {
+    enable: false,
+  },
+  sidebar: {
+    collapsed: true,
+    collapsedButton: false,
+    collapsedShowTitle: true,
+    fixedButton: false,
+  },
+  tabbar: {
+    enable: false,
+    styleType: 'plain',
+  },
+  theme: {
+    mode: 'light',
+  },
+  widget: {
+    refresh: false,
+  },
 });
