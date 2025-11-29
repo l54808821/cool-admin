@@ -1,6 +1,7 @@
 import type { RouteRecordRaw } from 'vue-router';
 
 import {
+  VBEN_ANT_PREVIEW_URL,
   VBEN_DOC_URL,
   VBEN_ELE_PREVIEW_URL,
   VBEN_GITHUB_URL,
